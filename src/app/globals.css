@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  --color-orange-400: #d11a1c !important;
+  --color-orange-500: #d11a1c !important;
+}
+
+
+/* Education board logo slider */
+.board-slider {
+  width: 100%;
+}
+
+.board-slider-track {
+  animation: board-marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.board-slider:hover .board-slider-track,
+.board-slider:focus-within .board-slider-track {
+  animation-play-state: paused;
+}
+
+/* @keyframes board-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .board-slider-track {
+    animation: none;
+    transform: none;
+  }
+
+  .board-slider > div:last-child {
+    display: none;
+  }
+} */
+
+.board-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.board-slider-track {
+  animation: scroll 25s linear infinite;
+}
+
+.board-slider:hover .board-slider-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
