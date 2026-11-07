@@ -28,6 +28,10 @@ body {
 @theme {
   --color-orange-400: #d11a1c !important;
   --color-orange-500: #d11a1c !important;
+  --bg-orange-600: #d11a1c !important;
+  --bg-orange-700: #d11a1c !important;
+  --text-orange-700: #d11a1c !important;
+  --text-orange-600: #d11a1c !important;
 }
 
 

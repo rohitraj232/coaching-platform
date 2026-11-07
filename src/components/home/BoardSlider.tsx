@@ -14,7 +14,7 @@ const boards = [
   {
     name: "BSEB",
     subtitle: "Bihar Board",
-    logo: "/images/boards/bseb.jfif",
+    logo: "/images/boards/bseb.webp",
     color: "text-orange-700",
     background: "bg-orange-50",
     border: "border-orange-100",
@@ -38,7 +38,7 @@ const boards = [
   {
     name: "NVS",
     subtitle: "Navodaya Vidyalaya Schools",
-    logo: "/images/boards/nvs.jfif",
+    logo: "/images/boards/nvs.png",
     color: "text-cyan-700",
     background: "bg-cyan-50",
     border: "border-cyan-100",

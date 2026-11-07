@@ -41,10 +41,9 @@ const courseResources = [
 
 const navLinks = [
   { label: "Home", href: "/", icon: Home },
-  { label: "Lectures", href: "/lectures", icon: Video },
-  { label: "Results", href: "/results", icon: Trophy },
   { label: "About", href: "/about", icon: Info },
   { label: "Contact", href: "/contact", icon: Phone },
+  { label: "Careers", href: "/careers", icon: Phone },
 ];
 
 export default function Navbar() {
@@ -251,15 +250,15 @@ export default function Navbar() {
           )}
         </div> */}
 
-<div className="hidden lg:block">
-  <Link
-              href="#"
-              className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-orange-600"
-            >
-              <FaSignInAlt size={17} />
-              Login / Register
-            </Link>
-</div>
+        <div className="hidden lg:block">
+          <Link
+            href="#"
+            className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-orange-600"
+          >
+            <FaSignInAlt size={17} />
+            Login / Register
+          </Link>
+        </div>
 
         {/* Mobile menu toggle */}
         <button
@@ -395,8 +394,8 @@ export default function Navbar() {
               </Link>
             )} */}
 
-<div className="lg:hidden block">
-  <Link
+            <div className="lg:hidden block">
+              <Link
                 href="#"
                 onClick={closeMenus}
                 className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-orange-500 px-4 py-3 font-bold text-white hover:bg-orange-600"
@@ -404,7 +403,7 @@ export default function Navbar() {
                 <FaSignInAlt size={18} />
                 Login / Register
               </Link>
-</div>
+            </div>
           </div>
         </div>
       )}

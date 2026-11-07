@@ -14,7 +14,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <main>
 
@@ -28,7 +28,7 @@ export default async function HomePage() {
         <Testimonials />
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

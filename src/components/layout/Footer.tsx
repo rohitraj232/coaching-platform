@@ -111,17 +111,17 @@ const courses = [
 const socialLinks = [
   {
     label: "Facebook",
-    href: "https://www.facebook.com/",
+    href: "#",
     icon: FaFacebookF,
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "#",
     icon: FaInstagram,
   },
   {
     label: "YouTube",
-    href: "https://www.youtube.com/",
+    href: "https://www.youtube.com/@AccelerateAcademy2.0",
     icon: FaYoutube,
   },
 ];
@@ -230,26 +230,24 @@ export default function Footer() {
                   className="mt-1 shrink-0 text-orange-400"
                 />
                 <p className="text-sm leading-6 text-slate-300">
-                  Your Coaching Institute Address,
-                  <br />
-                  City, State, India
+                  Pal Nagar, Near Circus Ground, Fathepur, Siwan, Bihar 841226
                 </p>
               </div>
 
               <a
-                href="tel:+910000000000"
+                href="tel:7974393519"
                 className="flex items-center gap-3 text-sm text-slate-300 transition hover:text-orange-400"
               >
                 <Phone size={18} className="shrink-0 text-orange-400" />
-                +91 00000 00000
+                +91 7974393519
               </a>
 
               <a
-                href="mailto:info@example.com"
+                href="mailto:accelerateacademy0@gmail.com"
                 className="flex items-center gap-3 break-all text-sm text-slate-300 transition hover:text-orange-400"
               >
                 <Mail size={18} className="shrink-0 text-orange-400" />
-                info@example.com
+                accelerateacademy0@gmail.com
               </a>
 
               <div className="flex items-start gap-3">
@@ -260,14 +258,15 @@ export default function Footer() {
                 <p className="text-sm leading-6 text-slate-300">
                   Monday - Saturday
                   <br />
-                  8:00 AM - 6:00 PM
+                  06:00 AM - 09:00 AM <br />
+                  03:00 PM - 08:00 PM
                 </p>
               </div>
             </div>
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/910000000000"
+              href="https://wa.me/917974393519?text=Hello%20Accelerate%20Academy!%20I%20want%20to%20know%20more%20about%20your%20courses%20and%20admission%20process."
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-emerald-700"
@@ -292,7 +291,7 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-wrap justify-center gap-2">
-              {["CBSE", "BSEB", "Classes 8–12"].map((item) => (
+              {["CBSE", "BSEB", "Classes 1 – 12"].map((item) => (
                 <span
                   key={item}
                   className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs font-bold text-orange-300"

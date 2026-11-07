@@ -88,23 +88,30 @@ import { ArrowRight } from "lucide-react";
 
 const courses = [
   {
-    title: "Class 6 - 8",
+    title: "Classes 1 - 5",
     session: "March - March",
-    image: "/images/course/6-8.jpg",
+    image: "/images/course/updated1-5.jpeg",
+    href: "class-1-5",
+    status: "available",
+  },
+  {
+    title: "Classes 6 - 8",
+    session: "March - March",
+    image: "/images/course/updated6-8.jpeg",
     href: "class-6-8",
     status: "available",
   },
   {
-    title: "Class 9 - 10",
+    title: "Classes 9 - 10",
     session: "March - June",
-    image: "/images/course/9-10.jpg",
+    image: "/images/course/updated9-10.jpeg",
     href: "class-9-10",
     status: "available",
   },
   {
-    title: "Class 11 - 12",
+    title: "Classes 11 - 12",
     session: "March - June",
-    image: "/images/course/11-12.jpg",
+    image: "/images/course/updated11-12.jpeg",
     href: "class-11-12",
     status: "available",
   },
@@ -134,7 +141,7 @@ export default function CourseSection() {
         </div>
 
         {/* Course cards */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {courses.map((course) => {
             const isAvailable = course.status === "available";
 

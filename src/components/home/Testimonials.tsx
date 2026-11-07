@@ -7,74 +7,74 @@ const testimonials = [
   {
     id: 1,
     name: "Ananya Sharma",
-    course: "NVS Preparation",
+    course: "NVS Entrance Preparation",
     image: "/assets/images/team/1.jpg",
     rating: 5,
     message:
-      "The mentors explain every concept clearly. The regular tests and doubt sessions helped me improve a lot.",
+      "The mental ability and arithmetic classes are very helpful. Regular mock tests and practice sessions have made my Navodaya entrance preparation much better.",
   },
   {
     id: 2,
     name: "Rahul Kumar",
-    course: "Class 12 Science",
+    course: "CBSE Class 12 – Science",
     image: "/assets/images/team/2.jpg",
     rating: 5,
     message:
-      "The live classes are excellent and the teachers focus on practical problem solving.",
+      "The teachers explain Physics, Chemistry and Mathematics in a simple way. Their concept-based teaching and regular tests have improved my understanding.",
   },
   {
     id: 3,
     name: "Priya Singh",
-    course: "Class 10",
+    course: "BSEB Class 10",
     image: "/assets/images/team/3.jpg",
     rating: 5,
     message:
-      "I really liked the personalized guidance. My confidence and performance improved significantly.",
+      "The classes are well-structured and follow the Bihar Board syllabus. Chapter-wise notes, important questions and revision sessions make exam preparation easier.",
   },
   {
     id: 4,
     name: "Aman Verma",
-    course: "Class 12 Science",
+    course: "ICSE Class 10",
     image: "/assets/images/team/1.jpg",
-    rating: 4,
+    rating: 5,
     message:
-      "The study material and weekly assessments made my preparation much more structured.",
+      "I really appreciate the detailed explanations and regular practice. The teachers focus on conceptual clarity, written answers and exam-oriented preparation.",
   },
   {
     id: 5,
     name: "Sneha Gupta",
-    course: "Class 10",
+    course: "KVS Entrance Preparation",
     image: "/assets/images/team/2.jpg",
     rating: 5,
     message:
-      "The faculty is very supportive and always ready to solve doubts during the live sessions.",
+      "The mathematics, reasoning and language sessions are very useful. Regular practice questions and mock tests have helped me prepare with more confidence.",
   },
   {
     id: 6,
     name: "Arjun Mehta",
-    course: "Class 10",
+    course: "Sainik School Entrance Preparation",
     image: "/assets/images/team/3.jpg",
     rating: 5,
     message:
-      "The quality of teaching is amazing. The difficult topics became much easier to understand.",
+      "The preparation covers mathematics, intelligence, English and general knowledge. The teachers explain every topic clearly and provide helpful practice material.",
   },
   {
     id: 7,
     name: "Kavya Reddy",
-    course: "Class 12 Science",
+    course: "CBSE Class 9",
     image: "/assets/images/team/1.jpg",
     rating: 5,
     message:
-      "The regular practice tests helped me identify my weak areas and improve my score.",
+      "The live classes are interactive and easy to follow. Regular assignments and doubt-clearing sessions have helped me build a strong foundation in every subject.",
   },
   {
     id: 8,
     name: "Aditya Sharma",
-    course: "Class 12 Science",
+    course: "BSEB Class 12 – Science",
     image: "/assets/images/team/2.jpg",
-    rating: 4,
+    rating: 5,
     message:
-      "A great learning platform with experienced mentors and excellent study resources.",
+      "The teachers provide excellent guidance for board examinations. The chapter-wise revision, important questions and regular assessments make learning more effective.",
   },
 ];
 
@@ -169,7 +169,7 @@ export default function Testimonials() {
               <div className="absolute -bottom-24 -left-20 h-56 w-56 rounded-full bg-indigo-500/10" />
 
               {/* Mentor Image */}
-              <div className="relative mx-auto h-72 w-72 max-w-full overflow-hidden rounded-full border-8 border-white/10">
+              <div className="relative mx-auto h-50 w-50 md:h-72 md:w-72 max-w-full overflow-hidden rounded-full border-8 border-white/10">
                 <Image
                   src="/images/teacher/teacher2.jpeg"
                   alt="Expert Mentor"
@@ -287,9 +287,9 @@ export default function Testimonials() {
                   {/* ====================================
                       QUOTE ICON
                   ==================================== */}
-                  <div className="mt-5">
+                  <div className="mt-2">
 
-                    <div className="mb-3 text-3xl font-serif leading-none text-indigo-100">
+                    <div className="text-3xl font-serif leading-none text-indigo-100">
                       "
                     </div>
 
