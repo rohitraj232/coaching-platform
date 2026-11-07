@@ -36,7 +36,7 @@
 
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import ReduxProvider from "@/providers/ReduxProvider";
+// import ReduxProvider from "@/providers/ReduxProvider";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -59,7 +59,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <ReduxProvider>{children}</ReduxProvider>
+        {/* <ReduxProvider>{children}</ReduxProvider> */}
+        {children}
       </body>
     </html>
   );

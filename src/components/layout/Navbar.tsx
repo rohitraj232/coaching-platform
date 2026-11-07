@@ -2,8 +2,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import type { User } from "@supabase/supabase-js";
-import { createClient } from "@/lib/supabase/client";
+// import type { User } from "@supabase/supabase-js";
+// import { createClient } from "@/lib/supabase/client";
 import { FaUserCircle, FaSignInAlt } from "react-icons/fa";
 import Link from "next/link";
 import {
@@ -53,37 +53,37 @@ export default function Navbar() {
   const [activeClass, setActiveClass] = useState<string | null>(null);
   const [mobileOpenClass, setMobileOpenClass] = useState<string | null>(null);
 
-  const supabase = useMemo(() => createClient(), []);
+  // const supabase = useMemo(() => createClient(), []);
 
-  const [user, setUser] = useState<User | null>(null);
+  // const [user, setUser] = useState<User | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
 
-  useEffect(() => {
-    let mounted = true;
+  // useEffect(() => {
+  //   let mounted = true;
 
-    // Listen for login, logout and session changes
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (mounted) {
-        setUser(session?.user ?? null);
-        setAuthLoading(false);
-      }
-    });
+  //   // Listen for login, logout and session changes
+  //   const {
+  //     data: { subscription },
+  //   } = supabase.auth.onAuthStateChange((_event, session) => {
+  //     if (mounted) {
+  //       setUser(session?.user ?? null);
+  //       setAuthLoading(false);
+  //     }
+  //   });
 
-    // Check existing session when Navbar loads
-    supabase.auth.getUser().then(({ data, error }) => {
-      if (mounted) {
-        setUser(error ? null : data.user);
-        setAuthLoading(false);
-      }
-    });
+  //   // Check existing session when Navbar loads
+  //   supabase.auth.getUser().then(({ data, error }) => {
+  //     if (mounted) {
+  //       setUser(error ? null : data.user);
+  //       setAuthLoading(false);
+  //     }
+  //   });
 
-    return () => {
-      mounted = false;
-      subscription.unsubscribe();
-    };
-  }, [supabase]);
+  //   return () => {
+  //     mounted = false;
+  //     subscription.unsubscribe();
+  //   };
+  // }, [supabase]);
 
   const closeMenus = () => {
     setMobileMenuOpen(false);
@@ -229,7 +229,7 @@ export default function Navbar() {
         {/* Desktop login */}
 
         {/* Desktop Authentication */}
-        <div className="hidden lg:block">
+        {/* <div className="hidden lg:block">
           {authLoading ? (
             <div className="h-10 w-32 animate-pulse rounded-xl bg-slate-100" />
           ) : user ? (
@@ -249,8 +249,17 @@ export default function Navbar() {
               Login / Register
             </Link>
           )}
-        </div>
+        </div> */}
 
+<div className="hidden lg:block">
+  <Link
+              href="#"
+              className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-orange-600"
+            >
+              <FaSignInAlt size={17} />
+              Login / Register
+            </Link>
+</div>
 
         {/* Mobile menu toggle */}
         <button
@@ -364,7 +373,7 @@ export default function Navbar() {
             })}
 
 
-            {authLoading ? (
+            {/* {authLoading ? (
               <div className="mt-3 h-11 animate-pulse rounded-xl bg-slate-100" />
             ) : user ? (
               <Link
@@ -384,8 +393,18 @@ export default function Navbar() {
                 <FaSignInAlt size={18} />
                 Login / Register
               </Link>
-            )}
+            )} */}
 
+<div className="lg:hidden block">
+  <Link
+                href="#"
+                onClick={closeMenus}
+                className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-orange-500 px-4 py-3 font-bold text-white hover:bg-orange-600"
+              >
+                <FaSignInAlt size={18} />
+                Login / Register
+              </Link>
+</div>
           </div>
         </div>
       )}
