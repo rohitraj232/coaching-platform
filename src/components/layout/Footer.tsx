@@ -101,12 +101,10 @@ const quickLinks = [
 ];
 
 const courses = [
-  { label: "Classes 1 - 5", href: "/courses/classes-1-to-8" },
-  { label: "Class 8", href: "/courses/class-8" },
-  { label: "Class 9", href: "/courses/class-9" },
-  { label: "Class 10", href: "/courses/class-10" },
-  { label: "Class 11", href: "/courses/class-11" },
-  { label: "Class 12", href: "/courses/class-12" },
+  { label: "Classes 1 - 5", href: "/courses/classes-1-to-5" },
+  { label: "Classes 6 - 8", href: "/courses/classes-6-to-8" },
+  { label: "Class 9 - 10", href: "/courses/class-9-to-10" },
+  { label: "Class 11 - 12", href: "/courses/class-11-to-12" },
 ];
 
 const socialLinks = [
