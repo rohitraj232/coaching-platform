@@ -101,6 +101,7 @@ const quickLinks = [
 ];
 
 const courses = [
+  { label: "Classes 1 - 5", href: "/courses/classes-1-to-8" },
   { label: "Class 8", href: "/courses/class-8" },
   { label: "Class 9", href: "/courses/class-9" },
   { label: "Class 10", href: "/courses/class-10" },
