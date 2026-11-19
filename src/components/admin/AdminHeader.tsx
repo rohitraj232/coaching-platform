@@ -26,7 +26,7 @@ export default async function AdminHeader() {
     .trim()
     .split(/\s+/)
     .slice(0, 2)
-    .map((part) => part.charAt(0))
+    .map((part:string) => part.charAt(0))
     .join("")
     .toUpperCase();
 

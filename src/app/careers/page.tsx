@@ -211,7 +211,7 @@ export default function CareersPage() {
 
                         <p className="mt-6 max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
                             Join Accelerate Academy as a teacher and make a meaningful
-                            difference in students' lives. Whether you are a fresher or
+                            difference in students lives. Whether you are a fresher or
                             an experienced educator, we welcome passionate teachers.
                         </p>
 
