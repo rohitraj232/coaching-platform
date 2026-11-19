@@ -14,4 +14,4 @@ export default function ReduxProvider({
 }
 
 // Why "use client"?
-// React Redux uses client-side React context and hooks. The provider makes the Redux store available to components nested inside it. 
+// React Redux uses client-side React context and hooks. The provider makes the Redux store available to components nested inside it.

@@ -18,6 +18,8 @@ import {
     School,
     X,
 } from "lucide-react";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const positions = [
     {
@@ -183,6 +185,8 @@ export default function CareersPage() {
     };
 
     return (
+        <>
+        <Navbar />
         <main className="overflow-hidden bg-white">
 
             {/* HERO SECTION */}
@@ -744,5 +748,8 @@ export default function CareersPage() {
                 </div>
             )}
         </main>
+        <Footer />
+
+        </>
     );
 }

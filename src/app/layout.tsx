@@ -1,39 +1,3 @@
-// import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
-// import ReduxProvider from "@/providers/ReduxProvider";
-// import "./globals.css";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
-// export const metadata: Metadata = {
-//   title: "Coaching Platform",
-//   description: "Learn, practice and prepare for your examinations.",
-// };
-
-// export default function RootLayout({
-//   children,
-// }: Readonly<{
-//   children: React.ReactNode;
-// }>) {
-//   return (
-//     <html lang="en">
-//       <body>
-//         <ReduxProvider>{children}</ReduxProvider>
-//       </body>
-//     </html>
-//   );
-// }
-
-
-
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 // import ReduxProvider from "@/providers/ReduxProvider";
@@ -61,11 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Navbar />
+        {/* <Navbar /> */}
         {/* <ReduxProvider>{children}</ReduxProvider> */}
         {children}
 
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

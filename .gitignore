@@ -42,8 +42,3 @@ next-env.d.ts
 
 .env.local
 *.zip
-
-
-
-# primary color: #072E7D; 
-# secondary color: #B31012;

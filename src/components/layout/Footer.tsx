@@ -1,79 +1,3 @@
-
-// import Link from "next/link";
-// import { GraduationCap, Mail, MapPin, Phone } from "lucide-react";
-
-// export default function Footer() {
-//   return (
-//     <footer id="contact" className="scroll-mt-24 bg-slate-950 text-slate-300">
-//       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
-//         <div>
-//           <Link href="/" className="flex items-center gap-2 text-white">
-//             <GraduationCap size={30} className="text-orange-400" />
-//             <span className="text-xl font-extrabold">
-//               LearnNextJS
-//             </span>
-//           </Link>
-
-//           <p className="mt-4 max-w-sm text-sm leading-7 text-slate-400">
-//             Helping students build strong concepts and prepare
-//             for examinations with structured learning and practice.
-//           </p>
-//         </div>
-
-//         <div>
-//           <h2 className="font-bold text-white">Quick Links</h2>
-//           <div className="mt-4 flex flex-col gap-3 text-sm">
-//             <Link href="/" className="hover:text-orange-400">Home</Link>
-//             <Link href="/#courses" className="hover:text-orange-400">Courses</Link>
-//             <Link href="/#lectures" className="hover:text-orange-400">Lectures</Link>
-//             <Link href="/#results" className="hover:text-orange-400">Results</Link>
-//           </div>
-//         </div>
-
-//         <div>
-//           <h2 className="font-bold text-white">Student Resources</h2>
-//           <div className="mt-4 flex flex-col gap-3 text-sm">
-//             <Link href="/login" className="hover:text-orange-400">Student Login</Link>
-//             <Link href="/register" className="hover:text-orange-400">Create Account</Link>
-//             <Link href="/quizzes" className="hover:text-orange-400">Practice Quizzes</Link>
-//             <Link href="/contact" className="hover:text-orange-400">Contact Us</Link>
-//           </div>
-//         </div>
-
-//         <div>
-//           <h2 className="font-bold text-white">Get in Touch</h2>
-//           <div className="mt-4 flex flex-col gap-4 text-sm text-slate-400">
-//             <p className="flex items-start gap-3">
-//               <MapPin size={18} className="shrink-0 text-orange-400" />
-//               Add your institute address
-//             </p>
-//             <p className="flex items-start gap-3">
-//               <Phone size={18} className="shrink-0 text-orange-400" />
-//               Add your contact number
-//             </p>
-//             <p className="flex items-start gap-3">
-//               <Mail size={18} className="shrink-0 text-orange-400" />
-//               Add your official email
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-
-//       <div className="border-t border-white/10">
-//         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-slate-500 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-//           <p>© {new Date().getFullYear()} Learn NextJS. All rights reserved.</p>
-//           <div className="flex gap-5">
-//             <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
-//             <Link href="/terms" className="hover:text-white">Terms & Conditions</Link>
-//           </div>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// }
-
-
-
 import Link from "next/link";
 import {
   MapPin,
@@ -93,18 +17,19 @@ import {
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Our Courses", href: "/#courses" },
-  { label: "Latest Lectures", href: "/#lectures" },
-  { label: "Results", href: "/#results" },
+  { label: "About Us", href: "#" },
+  { label: "Our Courses", href: "#" },
+  { label: "Latest Lectures", href: "#" },
+  { label: "Results", href: "#" },
   { label: "Contact Us", href: "/contact" },
+  { label: "Careers", href: "/careers" },
 ];
 
 const courses = [
-  { label: "Classes 1 - 5", href: "/courses/classes-1-to-5" },
-  { label: "Classes 6 - 8", href: "/courses/classes-6-to-8" },
-  { label: "Class 9 - 10", href: "/courses/class-9-to-10" },
-  { label: "Class 11 - 12", href: "/courses/class-11-to-12" },
+  { label: "Classes 1 - 5", href: "#" },
+  { label: "Classes 6 - 8", href: "#" },
+  { label: "Class 9 - 10", href: "#" },
+  { label: "Class 11 - 12", href: "#" },
 ];
 
 const socialLinks = [
@@ -312,14 +237,14 @@ export default function Footer() {
 
           <div className="flex items-center gap-5">
             <Link
-              href="/privacy"
+              href="#"
               className="text-xs text-slate-400 transition hover:text-orange-400"
             >
               Privacy Policy
             </Link>
 
             <Link
-              href="/terms"
+              href="#"
               className="text-xs text-slate-400 transition hover:text-orange-400"
             >
               Terms & Conditions

@@ -2,8 +2,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-// import type { User } from "@supabase/supabase-js";
-// import { createClient } from "@/lib/supabase/client";
+import type { User } from "@supabase/supabase-js";
+import { createClient } from "@/lib/supabase/client";
 import { FaUserCircle, FaSignInAlt } from "react-icons/fa";
 import Link from "next/link";
 import {
@@ -20,7 +20,6 @@ import {
   Info,
   Phone,
   LogIn,
-  ClipboardList
 } from "lucide-react";
 
 const courseClasses = [
@@ -36,14 +35,14 @@ const courseResources = [
   { label: "Videos", slug: "videos", icon: Video },
   { label: "Results", slug: "results", icon: Trophy },
   { label: "PDF", slug: "pdf", icon: FileDown },
-  { label: "Test Series", slug: "test-series", icon: ClipboardList },
 ];
 
 const navLinks = [
   { label: "Home", href: "/", icon: Home },
-  { label: "About", href: "/about", icon: Info },
-  { label: "Contact", href: "/contact", icon: Phone },
+  { label: "About", href: "#", icon: Info },
+  { label: "Results", href: "#", icon: Trophy },
   { label: "Careers", href: "/careers", icon: Phone },
+  { label: "Contact Us", href: "/contact", icon: Phone },
 ];
 
 export default function Navbar() {
@@ -52,37 +51,37 @@ export default function Navbar() {
   const [activeClass, setActiveClass] = useState<string | null>(null);
   const [mobileOpenClass, setMobileOpenClass] = useState<string | null>(null);
 
-  // const supabase = useMemo(() => createClient(), []);
+  const supabase = useMemo(() => createClient(), []);
 
-  // const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
 
-  // useEffect(() => {
-  //   let mounted = true;
+  useEffect(() => {
+    let mounted = true;
 
-  //   // Listen for login, logout and session changes
-  //   const {
-  //     data: { subscription },
-  //   } = supabase.auth.onAuthStateChange((_event, session) => {
-  //     if (mounted) {
-  //       setUser(session?.user ?? null);
-  //       setAuthLoading(false);
-  //     }
-  //   });
+    // Listen for login, logout and session changes
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (mounted) {
+        setUser(session?.user ?? null);
+        setAuthLoading(false);
+      }
+    });
 
-  //   // Check existing session when Navbar loads
-  //   supabase.auth.getUser().then(({ data, error }) => {
-  //     if (mounted) {
-  //       setUser(error ? null : data.user);
-  //       setAuthLoading(false);
-  //     }
-  //   });
+    // Check existing session when Navbar loads
+    supabase.auth.getUser().then(({ data, error }) => {
+      if (mounted) {
+        setUser(error ? null : data.user);
+        setAuthLoading(false);
+      }
+    });
 
-  //   return () => {
-  //     mounted = false;
-  //     subscription.unsubscribe();
-  //   };
-  // }, [supabase]);
+    return () => {
+      mounted = false;
+      subscription.unsubscribe();
+    };
+  }, [supabase]);
 
   const closeMenus = () => {
     setMobileMenuOpen(false);
@@ -126,9 +125,12 @@ export default function Navbar() {
           >
             Home
           </Link>
+          {/* <Link href="/my-quizzes" className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-blue-50 hover:text-blue-900">
+            My Quiz History
+          </Link> */}
 
           {/* Courses dropdown */}
-          <div
+          {/* <div
             className="relative"
             onMouseEnter={() => setCoursesOpen(true)}
             onMouseLeave={() => {
@@ -184,7 +186,6 @@ export default function Navbar() {
                       <ChevronRight size={16} />
                     </button>
 
-                    {/* Nested resources dropdown */}
                     {activeClass === course.slug && (
                       <div className="absolute left-full top-0 z-50 w-52 rounded-xl border border-slate-200 bg-white p-2 shadow-xl">
                         <p className="px-3 py-2 text-xs font-bold uppercase tracking-wider text-slate-400">
@@ -212,7 +213,7 @@ export default function Navbar() {
                 ))}
               </div>
             )}
-          </div>
+          </div> */}
 
           {navLinks.slice(1).map((item) => (
             <Link
@@ -228,12 +229,12 @@ export default function Navbar() {
         {/* Desktop login */}
 
         {/* Desktop Authentication */}
-        {/* <div className="hidden lg:block">
+        <div className="hidden lg:block">
           {authLoading ? (
             <div className="h-10 w-32 animate-pulse rounded-xl bg-slate-100" />
           ) : user ? (
             <Link
-              href="/profile"
+              href="/student/profile"
               className="inline-flex items-center gap-2 rounded-xl bg-blue-900 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-blue-800"
             >
               <FaUserCircle size={18} />
@@ -241,24 +242,15 @@ export default function Navbar() {
             </Link>
           ) : (
             <Link
-              href="#"
+              href="/login"
               className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-orange-600"
             >
               <FaSignInAlt size={17} />
               Login / Register
             </Link>
           )}
-        </div> */}
-
-        <div className="hidden lg:block">
-          <Link
-            href="#"
-            className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-orange-600"
-          >
-            <FaSignInAlt size={17} />
-            Login / Register
-          </Link>
         </div>
+
 
         {/* Mobile menu toggle */}
         <button
@@ -286,6 +278,7 @@ export default function Navbar() {
             </Link>
 
             {/* Mobile courses accordion */}
+            {/*
             <div>
               <button
                 type="button"
@@ -353,7 +346,8 @@ export default function Navbar() {
                   ))}
                 </div>
               )}
-            </div>
+            </div> 
+            */}
 
             {navLinks.slice(1).map((item) => {
               const Icon = item.icon;
@@ -372,11 +366,11 @@ export default function Navbar() {
             })}
 
 
-            {/* {authLoading ? (
+            {authLoading ? (
               <div className="mt-3 h-11 animate-pulse rounded-xl bg-slate-100" />
             ) : user ? (
               <Link
-                href="/profile"
+                href="/student/profile"
                 onClick={closeMenus}
                 className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-blue-900 px-4 py-3 font-bold text-white hover:bg-blue-800"
               >
@@ -385,25 +379,15 @@ export default function Navbar() {
               </Link>
             ) : (
               <Link
-                href="#"
+                href="/login"
                 onClick={closeMenus}
                 className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-orange-500 px-4 py-3 font-bold text-white hover:bg-orange-600"
               >
                 <FaSignInAlt size={18} />
                 Login / Register
               </Link>
-            )} */}
+            )}
 
-            <div className="lg:hidden block">
-              <Link
-                href="#"
-                onClick={closeMenus}
-                className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-orange-500 px-4 py-3 font-bold text-white hover:bg-orange-600"
-              >
-                <FaSignInAlt size={18} />
-                Login / Register
-              </Link>
-            </div>
           </div>
         </div>
       )}

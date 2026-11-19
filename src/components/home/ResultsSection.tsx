@@ -156,7 +156,7 @@ export default function ResultsSection() {
         </div>
 
         {/* Statistics cards */}
-        {/* <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {achievementStats.map((stat) => {
             const Icon = stat.icon;
 
@@ -185,7 +185,7 @@ export default function ResultsSection() {
               </div>
             );
           })}
-        </div> */}
+        </div>
 
         {/* Main achievement banner */}
         <div className="relative mt-10 overflow-hidden rounded-3xl bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-900 px-6 py-10 sm:px-10 lg:px-14 lg:py-14">

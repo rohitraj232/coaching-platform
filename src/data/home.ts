@@ -36,19 +36,19 @@ export const courses = [
 
 export const videos = [
     {
-        title: "♥️ Teachers Day Celebration ♥️🎊 in Accelerate Academy 🔥",
-        subject: "Teachers Day",
-        videoId: "pOjtyDF9vY8",
-    },
-    {
-        title: "Chapter:- 08 Introduction to Trigonometry | Class 10th maths",
+        title: "Introduction to Mathematics",
         subject: "Mathematics",
-        videoId: "Cfr-pWA1_eE",
+        videoId: "VIDEO_ID_1",
     },
     {
-        title: "🔥Class 10th science | Chapter:-02(ACID BASE AND SALT)",
-        subject: "Science",
-        videoId: "uAZobcDclOM",
+        title: "Understanding Physics Concepts",
+        subject: "Physics",
+        videoId: "VIDEO_ID_2",
+    },
+    {
+        title: "Chemistry: Important Concepts",
+        subject: "Chemistry",
+        videoId: "VIDEO_ID_3",
     },
 ];
 
