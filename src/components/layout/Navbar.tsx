@@ -234,7 +234,7 @@ export default function Navbar() {
             <div className="h-10 w-32 animate-pulse rounded-xl bg-slate-100" />
           ) : user ? (
             <Link
-              href="/student/profile"
+              href="/profile"
               className="inline-flex items-center gap-2 rounded-xl bg-blue-900 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-blue-800"
             >
               <FaUserCircle size={18} />
@@ -370,7 +370,7 @@ export default function Navbar() {
               <div className="mt-3 h-11 animate-pulse rounded-xl bg-slate-100" />
             ) : user ? (
               <Link
-                href="/student/profile"
+                href="/profile"
                 onClick={closeMenus}
                 className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-blue-900 px-4 py-3 font-bold text-white hover:bg-blue-800"
               >
