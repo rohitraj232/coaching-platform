@@ -4,7 +4,7 @@ import StudyMaterialsList from "@/components/admin/StudyMaterialsList";
 
 export default function StudyMaterialsPage() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 p-4 sm:p-6">
       <div>
         <h1 className="text-2xl font-bold text-gray-900">
           Study Materials

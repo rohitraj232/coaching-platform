@@ -11,6 +11,7 @@ import {
   FiAward,
   FiYoutube,
   FiSettings,
+  FiBook,
   FiLogOut,
   FiX,
   FiMenu,
@@ -27,6 +28,11 @@ const menuItems = [
     label: "Quiz Management",
     href: "/admin/quizzes",
     icon: FiBookOpen,
+  },
+  {
+    label: "Study Materials",
+    href: "/admin/study-materials",
+    icon: FiBook,
   },
   {
     label: "Students",

@@ -41,7 +41,7 @@ export default function StudentSidebar({
   const pathname = usePathname();
 
   return (
-    <aside className="flex h-full min-h-screen w-full shrink-0 flex-col border-r border-gray-200 bg-white">
+    <aside className="flex h-full min-h-screen w-full shrink-0 flex-col border-r border-gray-200 bg-white transition-transform duration-300 lg:translate-x-0 -translate-x-full">
       <div className="flex h-20 shrink-0 items-center border-b border-gray-100 px-6">
         <Link
           href="/student"
