@@ -125,7 +125,7 @@ export default function ContactPage() {
                                 </a>
 
                                 <a
-                                    href="tel:+919876543210"
+                                    href="tel:+917974393519"
                                     className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 font-semibold text-white transition hover:bg-white/10"
                                 >
                                     <Phone size={17} />
@@ -341,12 +341,16 @@ export default function ContactPage() {
                                     <option value="" disabled>
                                         Select your interest
                                     </option>
-                                    <option value="school">School Preparation</option>
-                                    <option value="kvs">KVS / NVS Preparation</option>
-                                    <option value="sainik">Sainik School Preparation</option>
-                                    <option value="jee">BSEB Preparation</option>
-                                    <option value="neet">CBSE Preparation</option>
-                                    <option value="other">Other Enquiry</option>
+                                    <option value="class-1-to-5">Class 1 to 5</option>
+                                    <option value="class-6-to-8">class 6 to 8</option>
+                                    <option value="class-9-to-10">Class 9 to 10</option>
+                                    <option value="class-11-to-12">Class 11 to 12</option>
+                                    <option value="school-preparation">School Preparation</option>
+                                    <option value="kvs-nvs-preparation">KVS / NVS Preparation</option>
+                                    <option value="sainik-school-preparation">Sainik School Preparation</option>
+                                    <option value="bseb-preparation">BSEB Preparation</option>
+                                    <option value="cbse-preparation">CBSE Preparation</option>
+                                    <option value="other-enquiry">Other Enquiry</option>
                                 </select>
                             </div>
 
