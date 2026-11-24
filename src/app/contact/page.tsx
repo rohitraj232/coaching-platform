@@ -67,17 +67,15 @@ export default function ContactPage() {
 
         const whatsappNumber = "917974393519"; // Replace with your WhatsApp number
 
-        const whatsappMessage = `
-            Hello! I have a new enquiry from your website.
+        const whatsappMessage = `Hello! I have a new enquiry from your website.
 
-            *Name:* ${name}
-            *Phone:* ${phone}
-            *Email:* ${email}
-            *Interested In:* ${subject}
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Interested In: ${subject}
 
-            *Message:*
-            ${message}
-        `;
+Message:
+${message}`;
 
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
             whatsappMessage
@@ -342,7 +340,7 @@ export default function ContactPage() {
                                         Select your interest
                                     </option>
                                     <option value="class-1-to-5">Class 1 to 5</option>
-                                    <option value="class-6-to-8">class 6 to 8</option>
+                                    <option value="class-6-to-8">Class 6 to 8</option>
                                     <option value="class-9-to-10">Class 9 to 10</option>
                                     <option value="class-11-to-12">Class 11 to 12</option>
                                     <option value="school-preparation">School Preparation</option>
