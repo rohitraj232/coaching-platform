@@ -1,3 +1,4 @@
+"use client";
 
 import Link from "next/link";
 import {
@@ -52,6 +53,38 @@ const contactDetails = [
 ];
 
 export default function ContactPage() {
+    const handleWhatsAppSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
+        const name = formData.get("name") as string;
+        const phone = formData.get("phone") as string;
+        const email = formData.get("email") as string;
+        const subject = formData.get("subject") as string;
+        const message = formData.get("message") as string;
+
+        const whatsappNumber = "917974393519"; // Replace with your WhatsApp number
+
+        const whatsappMessage = `
+            Hello! I have a new enquiry from your website.
+
+            *Name:* ${name}
+            *Phone:* ${phone}
+            *Email:* ${email}
+            *Interested In:* ${subject}
+
+            *Message:*
+            ${message}
+        `;
+
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+            whatsappMessage
+        )}`;
+
+        window.open(whatsappURL, "_blank");
+    };
     return (
         <>
             <Navbar />
@@ -237,7 +270,7 @@ export default function ContactPage() {
                             </p>
                         </div>
 
-                        <form action="#" method="POST" className="space-y-5">
+                        <form onSubmit={handleWhatsAppSubmit} className="space-y-5">
                             <div className="grid gap-5 sm:grid-cols-2">
                                 <div>
                                     <label
